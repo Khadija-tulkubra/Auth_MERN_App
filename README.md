@@ -1,102 +1,97 @@
-# MERN Authentication System
+# Task Management App using MERN Stack
 
-A complete authentication system built with **MongoDB, Express.js, React, and Node.js** using **Tailwind CSS** for styling.  
-It includes **User Registration, Login, Forgot Password, and Reset Password** functionality.
-
----
-
-## 🚀 Features
-- **User Registration** with email and password
-- **Secure Login** using JWT Authentication
-- **Password Encryption** using bcrypt
-- **Forgot Password** with email-based reset link
-- **Reset Password** page
-- **Responsive UI** with Tailwind CSS
-- **Form Validation** on both client and server
+This is a simple Task Management application built using the MERN stack (MongoDB, Express.js, React.js, Node.js).  
+It allows users to register, log in, reset passwords securely, and perform full CRUD operations on tasks.
 
 ---
 
-## 🛠️ Tech Stack
-### Frontend
-- React.js
-- Tailwind CSS
-- fetch
+## Features
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- JWT (JSON Web Token)
-- Bcrypt.js
-- Nodemailer
+- 🔐 **User Authentication** with JWT (JSON Web Tokens)  
+- 🔄 **Password Reset** functionality via email with token verification  
+- 📋 **Task Management**: Create, Read, Update, Delete (CRUD) tasks  
+- 🚀 Smooth integration between frontend (React) and backend (Express.js)  
+- 🛠️ Real-time feedback using toast notifications (react-toastify)  
+- 🗃️ Data stored securely in MongoDB using Mongoose  
+- 📧 Tested API endpoints using Postman  
+- 🗂️ MongoDB Compass used for database management and inspection  
 
 ---
 
-## 📂 Project Structure
-project-folder/
-│
-├── backend/ # Express server and APIs
-│ ├── models/ # Mongoose models
-│ ├── routes/ # API routes
-│ ├── controllers/ # Logic for APIs
-│ └── config/ # Database and environment config
-│
-├── frontend/ # React app
-│ ├── src/ # Components, pages, and services
+## Getting Started
 
----
+### Prerequisites
 
-## ⚙️ Installation & Setup
+- Node.js and npm installed  
+- MongoDB installed or MongoDB Atlas account  
+- Git installed  
 
-### 1️⃣ Clone the repository
+### Installation
 
-git clone https://github.com/your-username/mern-auth-system.git
-2️⃣ Backend Setup
+1. Clone the repo:
+
+git clone https://github.com/your-username/task-management-app-using-mern-stack.git
+Install dependencies for both backend and frontend:
+
 
 cd backend
 npm install
-Create a .env file inside the backend folder and add:
-
-env
-
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-EMAIL_USER=your_email
-EMAIL_PASS=your_email_app_password
-Run the backend:
-
-
-npm start
-3️⃣ Frontend Setup
 
 cd ../frontend
 npm install
-Run the frontend:
+Setup environment variables for backend (e.g. .env file):
 
-]
-npm run dev
-🔐 Environment Variables
-Make sure you configure:
 
-PORT
-
-MONGODB_URI
-
-JWT_SECRET
-
-EMAIL_USER & EMAIL_PASS for Nodemailer
-
-📸 Screenshots
-<img width="457" height="614" alt="image" src="https://github.com/user-attachments/assets/b166a5e8-2200-4fca-bfa1-3a3277b41cf5" />
-<img width="461" height="612" alt="image" src="https://github.com/user-attachments/assets/e7f48c34-81e3-42e4-b2c5-b4a2806f195d" />
-<img width="454" height="611" alt="image" src="https://github.com/user-attachments/assets/923a4d55-5961-4852-a476-5d4a06771301" />
-<img width="433" height="604" alt="image" src="https://github.com/user-attachments/assets/7ee01a35-d6f6-48da-8398-57a6f9655f84" />
-
-Author:
-Khadija tul kubra
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password_or_app_password
+Run the backend server:
 
 
 
-🤝 Contributing
-Pull requests are welcome! If you have suggestions or improvements, feel free to open an issue
+cd backend
+npm start
+Run the frontend app:
+
+
+cd frontend
+npm start
+Usage
+Register a new user account
+
+Log in with credentials
+
+Create, update, delete tasks
+
+Use password reset via email if needed
+
+Tools & Technologies Used
+MongoDB & Mongoose
+
+Express.js
+
+React.js with React Router
+
+Node.js
+
+JWT Authentication
+
+Nodemailer (for password reset emails)
+
+React-Toastify (for notifications)
+
+Postman (API testing)
+
+MongoDB Compass (Database management)
+
+Contribution
+Feel free to fork this repo and submit pull requests if you'd like to contribute!
+
+Contact
+Created by Khadija Tul Kubra
+You can reach me at: ikhadijatulkubra56@gmail.com
+
+Acknowledgements
+Thanks to the MERN stack community and all the helpful resources online!

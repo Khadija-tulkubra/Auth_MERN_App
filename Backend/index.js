@@ -11,6 +11,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use('/auth', require('./Routes/authRouter'));
 app.use('/products', require('./Routes/productrouter'));
+app.use('/tasks', require('./Routes/taskRoutes'));
+
+
+
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./Models/db');

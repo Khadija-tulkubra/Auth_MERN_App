@@ -16,7 +16,9 @@ It allows users to register, log in, reset passwords securely, and perform full 
 - 🛠️ Real-time feedback using toast notifications (react-toastify)  
 - 🗃️ Data stored securely in MongoDB using Mongoose  
 - 📧 Tested API endpoints using Postman  
-- 🗂️ MongoDB Compass used for database management and inspection  
+- 🗂️ MongoDB Compass used for database management and inspection
+
+<img width="1349" height="610" alt="image" src="https://github.com/user-attachments/assets/055795ee-2d4d-4406-98c5-4cb749916bd7" />
 
 ---
 

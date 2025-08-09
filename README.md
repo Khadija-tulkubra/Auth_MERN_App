@@ -1,4 +1,6 @@
 # Task Management App using MERN Stack
+<img width="1346" height="605" alt="image" src="https://github.com/user-attachments/assets/782e2f85-f47c-4e1c-9570-b3cb5f404fbc" />
+
 
 This is a simple Task Management application built using the MERN stack (MongoDB, Express.js, React.js, Node.js).  
 It allows users to register, log in, reset passwords securely, and perform full CRUD operations on tasks.

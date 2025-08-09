@@ -1,64 +1,34 @@
-import { useEffect, useState  } from "react";
-import { useNavigate } from "react-router-dom";
-import {  notifySuccess } from "../utils";
+
+import DashBoard from "../components/DashBoard";
+import { Outlet } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import Navigation from "../components/Navigation";
 function Home() {
-  const Navigate=useNavigate();
-  const [loggedInUser,setLoggedInUser]=useState('');
-  // const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const user = localStorage.getItem("loggedInUser");
-    localStorage.removeItem("cart"); // Force clear if needed
-
-    
-    setLoggedInUser(user || "");
-    
-  }, []);
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('loggedInUser');
-    notifySuccess('User logged out');
-    setTimeout(() => {
-      Navigate('/login');
-    }, 1000);
-  }
-  useEffect(() => {
-  const fetchProducts = async () => {
-    try {
-            const headers={
-               headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`
-
-        }
-        
-      }
-      const res = await fetch("http://localhost:3000/products",headers);
-
-      const data = await res.json();
-      console.log(data);
-      // setProducts(data); 
-    } catch (error) {
-      console.error("Error fetching products", error);
-    }
-  };
-
-  fetchProducts();
-}, []);
-
   return (
-    <div className="  items-center justify-center text-black p-4">
+    <div className="flex min-h-screen p-6">
       
-      <h1 className="text-4xl font-bold mb-6">Welcome, {loggedInUser} 👋</h1>
-      
-      <button 
-        onClick={handleLogout} 
-        className="px-6 py-2 bg-red-600 hover:bg-red-700 transition duration-300 rounded-full text-black text-lg shadow-lg"
-      >
-        Logout
-      </button>
-      
+      {/* Left Sidebar */}
+      <DashBoard />
+
+      {/* Right side: Navigation + Outlet */}
+      <div className="flex-1 flex flex-col ml-6 bg-white rounded-lg shadow-lg">
+        
+        {/* Navigation at top */}
+        <nav className="border-b p-4">
+          <Navigation />
+        </nav>
+
+        {/* Main content below navigation */}
+        <main className="flex-1 p-6 overflow-auto">
+          <Outlet />
+        </main>
+
+      </div>
+
       <ToastContainer />
     </div>
+  
+
   );
 }
 

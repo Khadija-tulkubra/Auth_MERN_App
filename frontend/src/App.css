@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 min-h-screen;
+  margin: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
